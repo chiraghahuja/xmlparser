@@ -24,3 +24,7 @@ hs_err_pid*
 replay_pid*
 
 .idea/
+
+# include DS_Store files in all searches
+**/.DS_Store
+target/
