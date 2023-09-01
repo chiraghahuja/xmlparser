@@ -15,24 +15,28 @@ public class XMLUtils {
 
     /**
      * Loads XML from a file and returns a list of Node objects representing the XML structure.
-     * Think about list of Nodes as a list of dictionaries.
-     * @param filePath the file path of the XML file to parse
-     * @return  a list of Node objects representing the XML structure
-     * @throws Exception if an error occurs while reading the XML file
-     * API examples:
-     *     // Provide the path to your XML file
-     *     String filePath = "path/to/your/xmlfile.xml";
-     *     try {
-     *         List<Node> nodes = XMLUtils.loadFromFile(filePath);
+     * Think about a list of Nodes as a list of dictionaries.
      *
-     *         for (Node node : nodes) {
-     *             // You can process each node as needed
-     *             System.out.println(node.asXML());
-     *         }
-     *     } catch (Exception e) {
-     *         e.printStackTrace();
+     * @param filePath the file path of the XML file to parse
+     * @return a list of {@link org.w3c.dom.Node} objects representing the XML structure
+     * @throws Exception if an error occurs while reading the XML file
+     *
+     *
+     * API examples:
+     * // Provide the path to your XML file
+     * String filePath = "path/to/your/xmlfile.xml";
+     * try {
+     *     List&lt;org.w3c.dom.Node&gt; nodes = XMLUtils.loadFromFile(filePath);
+     *
+     *     for (org.w3c.dom.Node node : nodes) {
+     *         // You can process each node as needed
+     *         System.out.println(node.asXML());
      *     }
+     * } catch (Exception e) {
+     *     e.printStackTrace();
+     * }
      */
+
     public static List<Node> loadFromFile(String filePath) throws Exception {
         List<Node> nodeList = new ArrayList<>();
 
